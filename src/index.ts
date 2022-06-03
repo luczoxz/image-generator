@@ -34,5 +34,5 @@ app.get('/images', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}.`)
-  if(args.test) process.kill(0)
+  if(args.test) process.exit(0)
 })
