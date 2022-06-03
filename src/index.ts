@@ -13,7 +13,7 @@ const extensions = ['.jpg', '.jpeg', '.png']
 const files = fs.readdirSync("./images/").filter(function(file) {
     return extensions.includes(path.extname(file).toLowerCase());
 });
-const max = `${files.length}`
+
 
 
 app.get('/api/random', (req, res) => {
@@ -23,7 +23,7 @@ app.get('/api/random', (req, res) => {
 
 app.get('/images', (req, res) => {
   if(!req.query.id) return res.json({message: "Image ID not specified."})
-  if(req.query.id >= max || req.query.id < '0') return res.json({code: 404, 
+  if((req.query.id >= `${files.length-1}` || req.query.id < '0')) return res.json({code: 404, 
     message: "An image with the specified ID does not exist."
   })
   const id = parseInt(req.query.id.toString())
