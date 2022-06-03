@@ -5,8 +5,8 @@ A simple image api 4-fun project in typescript.
 ## Installation
 To install, you have to compile the typescript files and install the dependencies. You can do that by using:
 ```sh
-tsc
 npm i
+tsc
 ```
 Then, you can run the script anytime using:
 ```sh
