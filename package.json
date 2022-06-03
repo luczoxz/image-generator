@@ -1,0 +1,15 @@
+{
+  "name": "cat_images_api",
+  "version": "0.1.0",
+  "description": "A simple cat images api in javascript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tsc && node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "author": "luczoxz",
+  "license": "ISC"
+}
