@@ -9,6 +9,7 @@ const app = express()
 let port = 3000
 if(args.port) port = args.port
 
+
 const extensions = ['.jpg', '.jpeg', '.png']
 const files = fs.readdirSync("./images/").filter(function(file) {
     return extensions.includes(path.extname(file).toLowerCase());
@@ -33,4 +34,5 @@ app.get('/images', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}.`)
+  if(args.test) process.kill(0)
 })
