@@ -10,7 +10,7 @@ lib-cov
 
 dist/**/*
 node_modules/**/*
-images/*
+
 
 .env
 
