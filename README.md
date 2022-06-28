@@ -22,7 +22,10 @@ To add images, put them in the `./images` directory. Each image has to be in the
 ### Possible requests
 
 #### `GET /api/random`
-Generates a random image. No parameters required. Returns an image ID.
+Generates a random image ID. No parameters required.
 
 #### `GET /images?id=<id>`
-Returns the image that has the specified ID. The only required parameter is `id`. For example: `GET /images?id=1509`
+Returns the image from `./images` that has the specified ID. The only required parameter is `id`. For example: `GET /images?id=1509`
+
+#### `GET /images/random`
+Returns a random image from the `./images` directory
